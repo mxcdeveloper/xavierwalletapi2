@@ -91,33 +91,33 @@ class EventSender {
 
   private _activatePiwik() {
     // insert code if not already there
-    if (document.getElementById('piwik')) return;
+  //   if (document.getElementById('piwik')) return;
 
-		const URL = '//xavierplatform.innocraft.cloud/';
+		// const URL = '//xavierplatform.innocraft.cloud/';
 
-    this._pushAll('_paq', [
-      ['setDocumentTitle', document.domain + '/' + document.title],
-      ['setCookieDomain', '*.xavierplatform.com'],
-      ['setDomains', ['*.xavierplatform.com']],
-      ['trackPageView'],
-      ['enableLinkTracking'],
-      ['setTrackerUrl', URL + 'piwik.php'],
-      ['setSiteId', '1'],
-		]);
+  //   this._pushAll('_paq', [
+  //     ['setDocumentTitle', document.domain + '/' + document.title],
+  //     ['setCookieDomain', '*.xavierplatform.com'],
+  //     ['setDomains', ['*.xavierplatform.com']],
+  //     ['trackPageView'],
+  //     ['enableLinkTracking'],
+  //     ['setTrackerUrl', URL + 'piwik.php'],
+  //     ['setSiteId', '1'],
+		// ]);
 		
-		// push internal queue contents into piwik
-		this._pushAll('_paq', this.internalQueue);
-		this.internalQueue = [];
+		// // push internal queue contents into piwik
+		// this._pushAll('_paq', this.internalQueue);
+		// this.internalQueue = [];
 
-    const g = document.createElement('script');
-    const s = document.getElementsByTagName('script')[0];
+  //   const g = document.createElement('script');
+  //   const s = document.getElementsByTagName('script')[0];
 
-    g.id = 'piwik';
-    g.type = 'text/javascript';
-    g.async = true;
-    g.defer = true;
-    g.src = URL + 'piwik.js';
-    s.parentNode.insertBefore(g, s);
+  //   g.id = 'piwik';
+  //   g.type = 'text/javascript';
+  //   g.async = true;
+  //   g.defer = true;
+  //   g.src = URL + 'piwik.js';
+  //   s.parentNode.insertBefore(g, s);
   }
 
   private _pushAll(queueName: string, data: any[][]): EventSender {

@@ -49,3 +49,12 @@ sender
   .pushPageView(window.location.href, document.referrer)
   .push('Home', 'Subscribe');
 ```
+
+# TODO before production release
+
+`- Change URL at line no. 96
+- Change setCookieDomain at line no. 100
+- Change setDomains at line no. 101`
+
+
+
